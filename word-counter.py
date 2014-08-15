@@ -38,7 +38,8 @@ heard nearby off stage"""
 print 'aber'
 
 def word_counter(string):
-    words = {}    
+    words = {}  
+    wc = 0  
 
     a_words = string.split()
     print len(a_words)
@@ -48,7 +49,10 @@ def word_counter(string):
             #print words
         else:
 	    words[word] += 1
-    print words
+
+    for a in words.keys():        
+	wc += 1
+    print words, "\n", 'There are ', wc ,'unique words in the string.'
 
 word_counter(tstring)
 
